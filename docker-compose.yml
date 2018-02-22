@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+
+  ssr:
+    image: orvice/shadowsocksr
+    restart: always
+    volumes:
+      - ./log:/var/log
+    env_file:
+      - mu.env
+    network_mode: host
+
+  v2ray-server:
+    image: v2ray/official
+    restart: always
+    volumes:
+      - ./v2ray:/etc/v2ray
+    ports:
+      - 8300:8300
+    command: ["v2ray", "-config=/etc/v2ray/config.json"]
+
+
+  v2ray-mu:
+    image: orvice/v2ray-mu
+    restart: always
+    volumes:
+      - ./log:/var/log
+    env_file:
+      - mu.env
