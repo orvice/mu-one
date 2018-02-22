@@ -11,7 +11,7 @@ services:
       - mu.env
     network_mode: host
 
-  v2ray-server:
+  v2ray:
     image: v2ray/official
     restart: always
     volumes:
