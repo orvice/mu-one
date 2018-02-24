@@ -6,7 +6,7 @@ services:
     image: orvice/shadowsocksr
     restart: always
     volumes:
-      - ./log:/var/log
+      - ./log:/var/log/v2ray
     env_file:
       - mu.env
     network_mode: host
