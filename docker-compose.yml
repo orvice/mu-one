@@ -6,6 +6,7 @@ services:
     image: orvice/shadowsocksr
     restart: always
     volumes:
+      - ./ssr/config.json:/usr/src/app/config.json
       - ./log/ssr:/var/log/ssr
     env_file:
       - mu.env
