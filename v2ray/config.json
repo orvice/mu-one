@@ -6,6 +6,8 @@
     ],
     "tag": "api"
   },
+  "stats": {
+  },
   "inbound": {
     "port": 8300,
     "protocol": "vmess",
