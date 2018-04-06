@@ -51,7 +51,7 @@
   },
   "policy": {
     "levels": {
-      "1": {
+      "2": {
         "handshake": 4,
         "connIdle": 300,
         "uplinkOnly": 5,
