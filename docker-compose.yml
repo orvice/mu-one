@@ -10,6 +10,11 @@ services:
       - ./log/ssr:/var/log/ssr
     env_file:
       - mu.env
+    logging:
+      driver: json-file
+      options:
+         max-size: "200k"
+         max-file: "10"
     network_mode: host
 
   v2ray:
@@ -28,5 +33,11 @@ services:
     restart: always
     volumes:
       - ./log/v2ray-mu:/var/log/v2ray-mu
+    logging:
+      driver: json-file
+      options:
+         max-size: "200k"
+         max-file: "10"
     env_file:
       - mu.env
+
