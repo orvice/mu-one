@@ -40,4 +40,16 @@ services:
          max-file: "10"
     env_file:
       - mu.env
+ 
+   monitor-client:
+    image: orvice/monitor-client
+    restart: always
+    volumes:
+      - ./monitor_client_log:/var/log
+    environment:
+      - NET_INTERFACE=eth0
+      - WEB_ADDr=:8080
+    container_name: monitor-client
+    ports:
+      - 8080:8080
 
