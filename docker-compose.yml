@@ -41,7 +41,7 @@ services:
     env_file:
       - mu.env
  
-   monitor-client:
+  monitor-client:
     image: orvice/monitor-client
     restart: always
     volumes:
