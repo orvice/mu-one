@@ -48,9 +48,8 @@ services:
       - ./monitor_client_log:/var/log
     environment:
       - NET_INTERFACE=eth0
-      - WEB_ADDr=:8080
+      - WEB_ADDR=:8080
+      - GRPC_ADDR=:8090
     container_name: monitor-client
-    ports:
-      - 8080:8080
-      - 8090:8090
+       network_mode: host
 
