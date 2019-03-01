@@ -25,6 +25,7 @@ services:
       - ./log/v2ray:/var/log/v2ray
     ports:
       - 8300:8300
+      - 8300:8300/udp
     command: ["v2ray", "-config=/etc/v2ray/config.json"]
 
 
