@@ -1,7 +1,6 @@
 FROM v2fly/v2fly-core:v4.42.2
 
-
-COPY --from=quay.io/orvice/v2ray-mu /app/bin/v2ray-mu /usr/bin/v2ray-mu
+COPY --from=ghcr.io/orvice/v2ray-mu:master /app/bin/v2ray-mu /usr/bin/v2ray-mu
 
 COPY config.json /etc/v2ray/config.json
 
