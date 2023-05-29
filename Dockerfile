@@ -1,4 +1,4 @@
-FROM v2fly/v2fly-core:v4.42.2
+FROM v2fly/v2fly-core:v5.4.1
 
 COPY --from=ghcr.io/orvice/v2ray-mu:master /app/bin/v2ray-mu /usr/bin/v2ray-mu
 
